@@ -1,56 +1,30 @@
-# FarmHealth AI
+# FarmHealth AI — ADTC 2026 Laptop LLM Submission (Agriculture)
 
-Offline Agricultural & Livestock Health Advisor for African Farmers and Extension Officers.
+Offline agricultural & livestock-health advisor for farmers and extension officers in northern Nigeria (Nasarawa, Kaduna, Adamawa, Kwali) — runs entirely on an 8 GB laptop with zero connectivity, in English and Hausa, through llama.cpp on a quantized GGUF model.
 
-## Project Overview
+## How scoring drives the design
 
-FarmHealth AI is a fully offline AI assistant designed to support farmers and agricultural extension officers with:
+- Accuracy (50%) = MCQ evaluation on the bare GGUF model
+- Speed (30%) + Efficiency (20%) reward small models
+- Cross-disciplinary integration = offline location-aware RAG
+- African use-case bonus = English + Hausa + local agricultural grounding
 
-- Crop advisory
-- Livestock management
-- Livestock-health education
-- Biosecurity guidance
-- Weather-related farming decisions
-- Agricultural decision support
+## Repository Structure
 
-The solution is being developed for the Africa Deep Tech Challenge (ADTC) 2026.
+- metadata.json
+- REPORT.md
+- ADTC_MASTER_SPEC.md
+- DATASET_SPEC.md
+- DOMAIN_MAP.md
+- dataset/mcq/
+- training/
+- benchmarks/
+- profiling/
 
-## Core Features
+## Status
 
-- Offline operation
-- Low-resource hardware support
-- Agricultural knowledge assistance
-- Livestock-health guidance
-- Retrieval-Augmented Generation (RAG)
-- English and Hausa support
+Planning, dataset design, benchmarking scaffold, and initial datasets complete. Next steps: dataset expansion, fine-tuning, quantization, profiling, and submission.
 
-## Technology Stack
+## License
 
-- Python
-- llama.cpp
-- GGUF
-- Qwen
-- RAG
-- SQLite
-- FastAPI
-
-## Team
-
-### Victor Ekarika
-Project Lead & AI Lead
-
-### Developer
-Lead Developer & AI Systems Engineer
-
-### UI/UX Designer
-Product Designer
-
-## Competition
-
-Africa Deep Tech Challenge 2026
-
-Primary Domain:
-Agriculture
-
-Cross-Disciplinary Integration:
-Offline Retrieval-Augmented Generation (RAG)
+See LICENSE and REPORT.md for model and tooling licenses.
