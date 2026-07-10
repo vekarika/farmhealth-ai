@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "profiler_version": "adtc-profiler 0.1.0",
   "submission": {
-    "team_id": "REPLACE_WITH_ADTF_TEAM_ID",
+    "team_id": "Farmhealth_Ai",
     "domain": "agriculture",
     "language_scope": [
       "en",
