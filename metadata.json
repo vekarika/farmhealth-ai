@@ -25,13 +25,13 @@
     }
   ],
   "model": {
-    "name": "agri-advisor-qwen2.5-1.5b-Q4_K_M",
+    "name": "farmhealth-ai-qwen2.5-1.5b-Q4_K_M",
     "runtime": "llama.cpp",
     "quantization": "GGUF Q4_K_M",
     "parameters_estimate": "1.5B",
     "packaging": "binary_bundle"
   },
   "_runtime": {
-    "model_path": "model/agri-advisor-qwen2.5-1.5b-Q4_K_M.gguf"
+    "model_path": "model/farmhealth-ai-qwen2.5-1.5b-Q4_K_M.gguf"
   }
 }

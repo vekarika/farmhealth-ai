@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "profiler_version": "adtc-profiler 0.1.0",
+  "submission": {
+    "team_id": "REPLACE_WITH_ADTF_TEAM_ID",
+    "domain": "agriculture",
+    "language_scope": [
+      "en",
+      "ha"
+    ],
+    "african_alpha_claim": true,
+    "budget_laptop_claim": true,
+    "submitter": {
+      "name": "Victor Ekarika",
+      "email": "victorekarika.jnr@gmail.com",
+      "github_handle": "vekarika"
+    },
+    "cross_disciplinary_pairing": {
+      "discipline": "information retrieval (location-aware offline RAG)",
+      "load_bearing": true,
+      "description": "The fine-tuned LLM (language + agronomic reasoning) is paired with an offline, location-aware information-retrieval system over local agronomic data the model cannot hold in its weights: per-LGA planting calendars, current local market prices, input costs, and recent pest/disease outbreak advisories for the northern Nigerian belt (Nasarawa, Kaduna, Adamawa, Kwali). The farmer's location selects the relevant local corpus, and answers are grounded in retrieved facts. The pairing is load-bearing: removing retrieval strips out all the volatile, region-specific data (prices, dated calendars, outbreak alerts), leaving only generic advice. The model reasons and answers in English or Hausa; retrieval supplies the local ground truth."
+    },
+    "test_prompts": [
+      {
+        "prompt_id": "tp_001",
+        "prompt": "A maize farmer in Kaduna planted three weeks ago and the lower leaves are turning yellow from the tip inward in a V-shape. Soil is sandy and there has been heavy rain. What is the most likely cause and what corrective action should the farmer take this week?"
+      },
+      {
+        "prompt_id": "tp_002",
+        "prompt": "Wani manomi a Adamawa yana son ya fara kiwon kaji na nama (broilers) da kai 50. Mene ne mafi muhimmancin abubuwa uku da zai shirya kafin kajin su iso, kuma wace yanayin zafi ya kamata brooder ya kasance a mako na farko?"
+      }
+    ],
+    "model": {
+      "name": "farmhealth-ai-qwen2.5-1.5b-Q4_K_M",
+      "runtime": "llama.cpp",
+      "quantization": "GGUF Q4_K_M",
+      "parameters_estimate": "1.5B",
+      "packaging": "binary_bundle"
+    }
+  },
+  "environment": {
+    "measured_on": "participant_laptop",
+    "cpu_model": "AMD EPYC 7452 32-Core Processor",
+    "ram_gb": 20.5,
+    "gpu": "NVIDIA RTX A4000",
+    "os": "Ubuntu 22.04.5 LTS"
+  },
+  "throughput": {
+    "tokens_per_second_generation": 27.61,
+    "first_token_latency_ms": 9198.12,
+    "prompt_tokens": 512,
+    "generated_tokens": 128
+  },
+  "memory": {
+    "peak_rss_mb": 1687.82,
+    "steady_state_rss_mb": 1627.36,
+    "peak_vms_mb": 2164.89
+  },
+  "accuracy": [],
+  "cpu_thermal": {
+    "cpu_percent_p99": 100.0,
+    "core_temp_c_peak": null,
+    "throttled": false
+  },
+  "reproducibility": {
+    "git_commit_sha": "a48b8d825ad5",
+    "docker_image_digest": "unknown",
+    "random_seed": 42
+  },
+  "model_info": {
+    "params_count": null,
+    "context_length": 32768,
+    "architecture": "qwen2",
+    "claimed_params_estimate": "1.5B",
+    "params_match": true
+  }
+}

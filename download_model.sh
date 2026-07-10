@@ -13,10 +13,10 @@ set -euo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MODEL_DIR="$HERE/model"
-MODEL_FILE="$MODEL_DIR/agri-advisor-qwen2.5-1.5b-Q4_K_M.gguf"
+MODEL_FILE="$MODEL_DIR/farmhealth-ai-qwen2.5-1.5b-Q4_K_M.gguf"
 
 # ── Replace with your PUBLIC Hugging Face direct download URL ──────────────────
-MODEL_URL="https://huggingface.co/REPLACE_USER/agri-advisor-qwen2.5-1.5b-GGUF/resolve/main/agri-advisor-qwen2.5-1.5b-Q4_K_M.gguf"
+MODEL_URL="https://huggingface.co/vekarika/farmhealth-ai-qwen2.5-1.5b-gguf/resolve/main/farmhealth-ai-qwen2.5-1.5b-Q4_K_M.gguf"
 # ──────────────────────────────────────────────────────────────────────────────
 
 mkdir -p "$MODEL_DIR"

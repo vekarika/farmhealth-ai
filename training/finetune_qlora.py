@@ -96,7 +96,7 @@ def main() -> None:
         logging_steps=10,
         save_strategy="epoch",
         bf16=True,
-        max_seq_length=args.max_len,
+        max_length=args.max_len,
         packing=True,
         dataset_text_field="text",
         report_to="none",
